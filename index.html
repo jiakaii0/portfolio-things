@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jia Kai Hong | Vibe Coder</title>
+    
+    <!-- SEO & Social Sharing Tags -->
+    <title>Jia Kai Hong | AI Chatbot Analyst & Vibe Coder</title>
+    <meta name="description" content="Portfolio of Jia Kai Hong - Product Manager, Prompt Engineer, and AI Analyst.">
+    <meta property="og:title" content="Jia Kai Hong - Portfolio">
+    <meta property="og:description" content="AI Chatbot Analyst, Prompt Engineer & Vibe Coder.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         /* --- Variables & Reset --- */
         :root {
             /* Pastel Blue Theme */
-            --bg-color: #eaf6ff;       /* Very light pastel blue */
-            --bg-gradient: linear-gradient(135deg, #eaf6ff 0%, #dbeafe 100%);
-            --text-main: #1e293b;      /* Dark Slate */
-            --text-muted: #64748b;     /* Muted Grey */
-            --accent: #3b82f6;         /* Bright Blue */
-            --vibe-gradient: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
-            --card-bg: rgba(255, 255, 255, 0.65); /* Glass effect */
-            --card-border: 1px solid rgba(255, 255, 255, 0.8);
-            --hover-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.15);
+            --bg-color: #f0f9ff;
+            --bg-gradient: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            --text-main: #0f172a;      /* Darkest Slate */
+            --text-muted: #475569;     /* Readable Grey */
+            --accent: #0ea5e9;         /* Sky Blue */
+            --vibe-gradient: linear-gradient(90deg, #0ea5e9, #8b5cf6, #f43f5e);
+            
+            /* Glassmorphism Cards */
+            --card-bg: rgba(255, 255, 255, 0.7); 
+            --card-border: 1px solid rgba(255, 255, 255, 0.9);
+            --hover-shadow: 0 10px 40px -10px rgba(14, 165, 233, 0.15);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             background: var(--bg-gradient);
@@ -42,6 +46,7 @@
             line-height: 1.6;
             overflow-x: hidden;
             min-height: 100vh;
+            padding-bottom: 80px; /* Space for mobile nav */
         }
 
         /* --- Visuals: Floating Background Blob --- */
@@ -49,26 +54,22 @@
             position: fixed;
             top: -10%;
             left: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: linear-gradient(to right, #c7d2fe, #bfdbfe);
-            filter: blur(80px);
+            width: 60vw;
+            height: 60vw;
+            background: linear-gradient(to right, #bae6fd, #ddd6fe);
+            filter: blur(90px);
             z-index: -1;
-            opacity: 0.6;
+            opacity: 0.5;
             animation: float 10s infinite alternate;
             border-radius: 50%;
         }
 
         @keyframes float {
             0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+            100% { transform: translate(30px, 50px); }
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-        }
+        a { text-decoration: none; color: inherit; transition: all 0.2s; }
 
         /* --- Layout Grid --- */
         .container {
@@ -82,15 +83,13 @@
         /* --- Left Column (Header) --- */
         header {
             padding-top: 3rem;
-            padding-bottom: 2rem;
+            padding-bottom: 1rem;
         }
 
-        /* Profile Picture Styling */
         .profile-pic-container {
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             margin-bottom: 1.5rem;
-            position: relative;
         }
 
         .profile-pic {
@@ -99,45 +98,43 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
             background-color: #cbd5e1;
         }
 
-        .profile-pic:hover {
-            transform: scale(1.05) rotate(-2deg);
-        }
+        .profile-pic:hover { transform: scale(1.05) rotate(-2deg); }
 
-        /* Badges */
         .vibe-badge {
             display: inline-block;
             background: white;
-            padding: 5px 12px;
+            padding: 6px 14px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             background: var(--vibe-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            border: 2px solid #e0e7ff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 2px solid #e0f2fe;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
 
         h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            font-weight: 800;
             color: var(--text-main);
             line-height: 1.1;
             margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
         }
 
         h2.role {
-            font-size: 1.25rem;
-            color: var(--text-main);
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
             font-weight: 500;
-            max-width: 90%;
+            line-height: 1.4;
         }
 
         .gradient-text {
@@ -156,15 +153,15 @@
 
         p.tagline {
             color: var(--text-muted);
-            max-width: 300px;
+            max-width: 400px;
             margin-bottom: 2rem;
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
 
-        /* Nav Links */
-        .nav-links { display: none; }
-        .nav-links ul { list-style: none; }
-        .nav-links a {
+        /* --- Desktop Navigation --- */
+        .desktop-nav { display: none; }
+        .desktop-nav ul { list-style: none; }
+        .desktop-nav a {
             display: flex;
             align-items: center;
             padding: 0.8rem 0;
@@ -172,23 +169,25 @@
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.8rem;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
         }
-        .nav-links a:hover {
+        .desktop-nav a:hover {
             color: var(--accent);
-            padding-left: 10px;
+            padding-left: 8px;
         }
+        .desktop-nav a.active { color: var(--text-main); border-left: 2px solid var(--accent); padding-left: 8px;}
 
-        /* Social Icons */
+        /* --- Social Icons --- */
         .socials {
             display: flex;
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
         }
         .socials a {
             color: var(--text-main);
-            font-size: 1.5rem;
-            transition: transform 0.2s;
+            font-size: 1.4rem;
+            transition: transform 0.2s, color 0.2s;
         }
         .socials a:hover {
             color: var(--accent);
@@ -197,20 +196,20 @@
 
         /* --- Right Column (Content) --- */
         main {
-            padding-top: 2rem;
-            padding-bottom: 5rem;
+            padding-top: 1rem;
+            padding-bottom: 3rem;
         }
 
         section {
-            margin-bottom: 5rem;
-            scroll-margin-top: 4rem;
+            margin-bottom: 4rem;
+            scroll-margin-top: 6rem; /* Keeps header from covering text */
         }
 
         .section-title {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--accent);
             font-weight: 700;
             display: block; 
@@ -218,24 +217,25 @@
 
         .about-text {
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 1rem;
         }
 
-        /* Cards */
+        /* --- Cards --- */
         .card {
             background: var(--card-bg);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             border: var(--card-border);
             border-radius: 16px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
         }
         .card:hover {
             background: rgba(255, 255, 255, 0.9);
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: var(--hover-shadow);
         }
 
@@ -245,36 +245,39 @@
             align-items: baseline;
             flex-wrap: wrap;
             margin-bottom: 0.5rem;
+            gap: 5px;
         }
         .job-title {
             font-size: 1.1rem;
             font-weight: 700;
             color: var(--text-main);
         }
-        .job-company { color: var(--accent); }
-        .job-date { font-size: 0.85rem; color: var(--text-muted); font-family: monospace; }
+        .job-company { color: var(--accent); font-weight: 600; }
+        .job-date { font-size: 0.85rem; color: #64748b; font-family: 'Courier New', monospace; }
         .job-desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1rem; }
 
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.6rem;
         }
         .tech-tag {
             background: white;
             color: var(--accent);
             font-size: 0.75rem;
-            padding: 0.4rem 1rem;
+            padding: 0.3rem 0.8rem;
             border-radius: 50px;
             font-weight: 600;
-            border: 1px solid #bfdbfe;
+            border: 1px solid #bae6fd;
         }
 
-        /* GitHub Visual Card */
+        /* --- GitHub Visual Card --- */
         .github-card {
-            background: #1e293b; 
+            background: #0f172a; /* Slate 900 */
             color: white;
             border: none;
+            position: relative;
+            overflow: hidden;
         }
         .github-header {
             display: flex;
@@ -285,16 +288,16 @@
         .github-stats {
             display: flex;
             justify-content: space-between;
-            background: rgba(255,255,255,0.1);
-            padding: 10px;
+            background: rgba(255,255,255,0.05);
+            padding: 12px;
             border-radius: 8px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
         .stat-box { text-align: center; }
-        .stat-num { font-weight: bold; font-size: 1.1rem; color: #5eead4; }
+        .stat-num { font-weight: bold; font-size: 1.1rem; color: #38bdf8; }
         .stat-label { font-size: 0.7rem; color: #94a3b8; }
 
-        /* Languages */
+        /* --- Languages Grid --- */
         .lang-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -307,16 +310,43 @@
             text-align: center;
             border: 1px solid #e2e8f0;
         }
-        .lang-item b { color: var(--text-main); display: block; font-size: 1.1rem;}
-        .lang-item span { font-size: 0.85rem; color: var(--text-muted); }
+        .lang-item b { color: var(--text-main); display: block; font-size: 1rem;}
+        .lang-item span { font-size: 0.8rem; color: var(--text-muted); }
 
         footer {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            margin-top: 4rem;
+            margin-top: 3rem;
+            text-align: center;
         }
 
-        /* Desktop Split Layout */
+        /* --- Mobile Floating Nav (NEW) --- */
+        .mobile-nav {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 1.5rem;
+            z-index: 1000;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .mobile-nav a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .mobile-nav a:hover, .mobile-nav a:active {
+            color: var(--accent);
+        }
+
+        /* --- Desktop Media Query --- */
         @media (min-width: 1024px) {
             .container {
                 flex-direction: row;
@@ -336,28 +366,35 @@
                 width: 53%;
                 padding-top: 5rem;
             }
-            .nav-links { display: block; margin-top: 2rem; }
+            .desktop-nav { display: block; margin-top: 2rem; }
+            .mobile-nav { display: none; } /* Hide mobile nav on desktop */
             .section-title { display: none; }
             h1 { font-size: 3.5rem; }
+            body { padding-bottom: 0; }
+            footer { text-align: left; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Animated Blob Background -->
+    <!-- Background Blob -->
     <div class="blob"></div>
 
+    <!-- Mobile Navigation (Bottom Floating Bar) -->
+    <nav class="mobile-nav">
+        <a href="#about" title="About"><i class="fas fa-user"></i></a>
+        <a href="#github" title="Code"><i class="fas fa-code"></i></a>
+        <a href="#experience" title="Work"><i class="fas fa-briefcase"></i></a>
+        <a href="mailto:jiakaii97@gmail.com" title="Contact"><i class="fas fa-envelope"></i></a>
+    </nav>
+
     <div class="container">
-        <!-- LEFT SIDE -->
+        <!-- LEFT SIDE (Sticky Header) -->
         <header>
             <div>
-                <!-- 
-                   IMAGE FIX: 
-                   1. Save your photo in the same folder as this file.
-                   2. Rename it to "profile.jpg".
-                -->
+                <!-- Profile Picture with Fallback -->
                 <div class="profile-pic-container">
-                    <img src="profile.jpg" alt="Jia Kai Hong" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Jia+Kai&background=random'">
+                    <img src="profile.jpg" alt="Jia Kai Hong" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Jia+Kai&background=0ea5e9&color=fff&size=150'">
                 </div>
 
                 <div class="vibe-badge">
@@ -366,12 +403,12 @@
 
                 <h1>Jia Kai Hong</h1>
                 
-                <!-- NEW TITLE HERE -->
                 <h2 class="role">AI Chatbot Analyst, Prompt Engineer & <span class="gradient-text">Vibe Coder</span></h2>
                 
                 <p class="tagline">Bridging business needs with AI intuition. I build tools, analyze data, and craft prompts that work.</p>
 
-                <nav class="nav-links">
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
                     <ul>
                         <li><a href="#about">01. About</a></li>
                         <li><a href="#github">02. GitHub & Code</a></li>
@@ -383,14 +420,15 @@
 
             <div class="socials">
                 <a href="mailto:jiakaii97@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <!-- Fixed Github Link -->
                 <a href="https://github.com/jiakaii0" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://wa.me/601121881339" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </header>
 
-        <!-- RIGHT SIDE -->
+        <!-- RIGHT SIDE (Scrolling Content) -->
         <main>
-            <!-- About -->
+            <!-- About Section -->
             <section id="about">
                 <span class="section-title">About</span>
                 <div class="about-text">
@@ -400,10 +438,11 @@
                 </div>
             </section>
 
-            <!-- GitHub & Coding -->
+            <!-- GitHub & Coding Section -->
             <section id="github">
                 <span class="section-title">GitHub & Code</span>
                 
+                <!-- Fixed Link Here -->
                 <a href="https://github.com/jiakaii0" target="_blank">
                     <div class="card github-card">
                         <div class="github-header">
@@ -447,7 +486,7 @@
                 </div>
             </section>
 
-            <!-- Experience -->
+            <!-- Experience Section -->
             <section id="experience">
                 <span class="section-title">Experience</span>
 
@@ -497,7 +536,7 @@
                 </div>
             </section>
 
-            <!-- Education -->
+            <!-- Education Section -->
             <section id="education">
                 <span class="section-title">Education & Languages</span>
                 
@@ -538,7 +577,7 @@
             </section>
 
             <footer>
-                <p>Designed with <i class="fas fa-heart" style="color: #ec4899;"></i> & Vibe.</p>
+                <p>Designed with <i class="fas fa-heart" style="color: #f43f5e;"></i> & Vibe.</p>
                 <p>&copy; 2025 Jia Kai Hong</p>
             </footer>
         </main>
