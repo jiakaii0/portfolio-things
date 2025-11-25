@@ -46,7 +46,7 @@
             line-height: 1.6;
             overflow-x: hidden;
             min-height: 100vh;
-            padding-bottom: 80px; /* Space for mobile nav */
+            padding-bottom: 100px; /* Extra space for mobile nav */
         }
 
         /* --- Visuals: Floating Background Blob --- */
@@ -86,10 +86,18 @@
             padding-bottom: 1rem;
         }
 
+        /* Header Content Container (For vertical centering) */
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Profile Picture - Slightly Smaller for better fit */
         .profile-pic-container {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 1.5rem;
+            width: 130px; 
+            height: 130px;
+            margin-bottom: 1.2rem;
         }
 
         .profile-pic {
@@ -130,9 +138,9 @@
         }
 
         h2.role {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-muted);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             font-weight: 500;
             line-height: 1.4;
         }
@@ -154,7 +162,7 @@
         p.tagline {
             color: var(--text-muted);
             max-width: 400px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-size: 1rem;
         }
 
@@ -164,7 +172,7 @@
         .desktop-nav a {
             display: flex;
             align-items: center;
-            padding: 0.8rem 0;
+            padding: 0.6rem 0; /* Reduced padding for compact fit */
             color: var(--text-muted);
             font-weight: 600;
             text-transform: uppercase;
@@ -181,8 +189,8 @@
         .socials {
             display: flex;
             gap: 1.5rem;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
+            margin-top: 1.5rem;
+            padding-bottom: 1rem;
         }
         .socials a {
             color: var(--text-main);
@@ -202,7 +210,7 @@
 
         section {
             margin-bottom: 4rem;
-            scroll-margin-top: 6rem; /* Keeps header from covering text */
+            scroll-margin-top: 6rem;
         }
 
         .section-title {
@@ -320,56 +328,68 @@
             text-align: center;
         }
 
-        /* --- Mobile Floating Nav (NEW) --- */
+        /* --- Mobile Floating Nav --- */
         .mobile-nav {
             position: fixed;
-            bottom: 20px;
+            bottom: 30px; /* Lifted higher */
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            padding: 0.8rem 1.5rem;
+            padding: 0.8rem 1.8rem;
             border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             display: flex;
-            gap: 1.5rem;
-            z-index: 1000;
-            border: 1px solid rgba(255,255,255,0.5);
+            gap: 1.8rem;
+            z-index: 9999;
+            border: 1px solid rgba(255,255,255,0.6);
         }
         .mobile-nav a {
             color: var(--text-muted);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             transition: color 0.3s;
         }
         .mobile-nav a:hover, .mobile-nav a:active {
             color: var(--accent);
         }
 
-        /* --- Desktop Media Query --- */
+        /* --- Desktop Media Query (Split Screen) --- */
         @media (min-width: 1024px) {
             .container {
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: flex-start; /* Ensures content starts at top */
             }
+
+            /* FIXED: Compact Sidebar Logic */
             header {
                 position: sticky;
                 top: 0;
                 width: 40%;
+                /* Instead of fixed height 100vh, we max it out */
                 height: 100vh;
-                padding: 5rem 0;
+                max-height: 100vh;
+                /* REDUCED PADDING: This brings content up */
+                padding: 3rem 0; 
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                /* Scroll if screen is too small */
+                overflow-y: auto;
+                /* Hide scrollbar for cleaner look */
+                scrollbar-width: none; 
             }
+            header::-webkit-scrollbar { display: none; }
+
             main {
                 width: 53%;
-                padding-top: 5rem;
+                padding-top: 3rem;
             }
-            .desktop-nav { display: block; margin-top: 2rem; }
-            .mobile-nav { display: none; } /* Hide mobile nav on desktop */
+            .desktop-nav { display: block; margin-top: 1.5rem; }
+            .mobile-nav { display: none; } 
             .section-title { display: none; }
-            h1 { font-size: 3.5rem; }
+            h1 { font-size: 3rem; }
             body { padding-bottom: 0; }
             footer { text-align: left; }
         }
@@ -391,14 +411,14 @@
     <div class="container">
         <!-- LEFT SIDE (Sticky Header) -->
         <header>
-            <div>
-                <!-- Profile Picture with Fallback -->
+            <div class="header-content">
+                <!-- Profile Picture -->
                 <div class="profile-pic-container">
                     <img src="profile.jpg" alt="Jia Kai Hong" class="profile-pic" onerror="this.src='https://ui-avatars.com/api/?name=Jia+Kai&background=0ea5e9&color=fff&size=150'">
                 </div>
 
                 <div class="vibe-badge">
-                    <i class="fas fa-magic"></i> Trying to Survive
+                    <i class="fas fa-magic"></i> Tyring to Survive
                 </div>
 
                 <h1>Jia Kai Hong</h1>
@@ -418,9 +438,9 @@
                 </nav>
             </div>
 
+            <!-- Socials (Bottom of Left Column) -->
             <div class="socials">
                 <a href="mailto:jiakaii97@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <!-- Fixed Github Link -->
                 <a href="https://github.com/jiakaii0" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://wa.me/601121881339" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
@@ -442,7 +462,6 @@
             <section id="github">
                 <span class="section-title">GitHub & Code</span>
                 
-                <!-- Fixed Link Here -->
                 <a href="https://github.com/jiakaii0" target="_blank">
                     <div class="card github-card">
                         <div class="github-header">
