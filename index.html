@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO & Social Sharing Tags -->
-    <title>Jia Kai Hong | AI Automation Engineer & AI Chatbot Business Analyst</title>
-    <meta name="description" content="Portfolio of Jia Kai Hong - AI Automation Engineer and AI Chatbot Business Analyst.">
+    <title>Jia Kai Hong | Digital & AI Transformation | Business Analysis</title>
+    <meta name="description" content="Jia Kai Hong, Lead AI Engineer at Shopee. AI implementation, digital payments, business analysis and measurable process improvement.">
     <meta property="og:title" content="Jia Kai Hong - Portfolio">
-    <meta property="og:description" content="AI Automation Engineer, AI Chatbot Business Analyst & Vibe Coder.">
+    <meta property="og:description" content="Lead AI Engineer delivering AI agents, digital payment support and business process improvements.">
     <meta property="og:type" content="website">
 
     <!-- Fonts & Icons -->
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         /* --- Variables & Reset --- */
         :root {
@@ -27,9 +27,9 @@
             --text-muted: #475569;     /* Readable Grey */
             --accent: #0ea5e9;         /* Sky Blue */
             --vibe-gradient: linear-gradient(90deg, #0ea5e9, #8b5cf6, #f43f5e);
-            
+
             /* Glassmorphism Cards */
-            --card-bg: rgba(255, 255, 255, 0.7); 
+            --card-bg: rgba(255, 255, 255, 0.7);
             --card-border: 1px solid rgba(255, 255, 255, 0.9);
             --hover-shadow: 0 10px 40px -10px rgba(14, 165, 233, 0.15);
         }
@@ -95,7 +95,7 @@
 
         /* Profile Picture - Slightly Smaller for better fit */
         .profile-pic-container {
-            width: 130px; 
+            width: 130px;
             height: 130px;
             margin-bottom: 1.2rem;
         }
@@ -220,7 +220,7 @@
             margin-bottom: 1rem;
             color: var(--accent);
             font-weight: 700;
-            display: block; 
+            display: block;
         }
 
         .about-text {
@@ -371,14 +371,14 @@
                 height: 100vh;
                 max-height: 100vh;
                 /* REDUCED PADDING: This brings content up */
-                padding: 3rem 0; 
+                padding: 3rem 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 /* Scroll if screen is too small */
                 overflow-y: auto;
                 /* Hide scrollbar for cleaner look */
-                scrollbar-width: none; 
+                scrollbar-width: none;
             }
             header::-webkit-scrollbar { display: none; }
 
@@ -387,11 +387,22 @@
                 padding-top: 3rem;
             }
             .desktop-nav { display: block; margin-top: 1.5rem; }
-            .mobile-nav { display: none; } 
-            .section-title { display: none; }
+            .mobile-nav { display: none; }
+            .section-title { display: block; }
             h1 { font-size: 3rem; }
             body { padding-bottom: 0; }
             footer { text-align: left; }
+        }
+        .about-text p + p { margin-top: 1rem; }
+        .project-result { color: #0369a1; font-weight: 700; margin: 0.65rem 0; }
+        .resume-link { display: inline-flex; align-self: flex-start; gap: 0.35rem; border: 1px solid #0369a1; color: #075985; border-radius: 10px; padding: 0.65rem 1rem; font-weight: 600; }
+        .resume-link:hover { background: #e0f2fe; }
+        .resume-link span { font-weight: 400; }
+        a:focus-visible { outline: 3px solid #0369a1; outline-offset: 4px; }
+        .section-title { padding-bottom: 0.5rem; border-bottom: 1px solid #bad5e5; color: #0369a1; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation: none !important; transition: none !important; }
         }
     </style>
 </head>
@@ -403,7 +414,7 @@
     <!-- Mobile Navigation (Bottom Floating Bar) -->
     <nav class="mobile-nav">
         <a href="#about" title="About"><i class="fas fa-user"></i></a>
-        <a href="#github" title="Code"><i class="fas fa-code"></i></a>
+        <a href="#projects" title="Projects" aria-label="Projects"><i class="fas fa-code" aria-hidden="true"></i></a>
         <a href="#experience" title="Work"><i class="fas fa-briefcase"></i></a>
         <a href="mailto:jiakaii97@gmail.com" title="Contact"><i class="fas fa-envelope"></i></a>
     </nav>
@@ -418,22 +429,25 @@
                 </div>
 
                 <div class="vibe-badge">
-                    <i class="fas fa-magic"></i> Trying to Survive
+                    <i class="fas fa-code" aria-hidden="true"></i> From requirements to implementation
                 </div>
 
                 <h1>Jia Kai Hong</h1>
-                
-                <h2 class="role">AI Automation Engineer, AI Chatbot Business Analyst & <span class="gradient-text">Vibe Coder</span></h2>
-                
-                <p class="tagline">Bridging business needs with AI intuition. I build tools, analyze data, and craft prompts that work.</p>
+
+                <h2 class="role">Lead AI Engineer<br><span class="gradient-text">Digital &amp; AI Transformation</span></h2>
+
+                <p class="tagline">I connect business requirements with hands-on AI delivery, improving digital payments, customer support and internal workflows.</p>
+
+                <a class="resume-link" href="Jia_Kai_Hong_Resume.pdf" download>Download resume <span>(PDF)</span></a>
 
                 <!-- Desktop Navigation -->
                 <nav class="desktop-nav">
                     <ul>
                         <li><a href="#about">01. About</a></li>
-                        <li><a href="#github">02. GitHub & Code</a></li>
-                        <li><a href="#experience">03. Experience</a></li>
-                        <li><a href="#education">04. Education</a></li>
+                        <li><a href="#experience">02. Experience</a></li>
+                        <li><a href="#projects">03. Projects</a></li>
+                        <li><a href="#github">04. Skills &amp; Code</a></li>
+                        <li><a href="#education">05. Education &amp; Languages</a></li>
                     </ul>
                 </nav>
             </div>
@@ -441,7 +455,7 @@
             <!-- Socials (Bottom of Left Column) -->
             <div class="socials">
                 <a href="mailto:jiakaii97@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/jiakaii0" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/jiakaii0" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://wa.me/601121881339" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
         </header>
@@ -450,74 +464,27 @@
         <main>
             <!-- About Section -->
             <section id="about">
-                <span class="section-title">About</span>
+                <h2 class="section-title">About</h2>
                 <div class="about-text">
-                    <p>I don't just write prompts; I design <strong>systems and AI architecture</strong>. As a results-driven individual with a background in <strong>AI Automation Engineering & AI Chatbot Business Analysis</strong>, I leverage LLMs and AI to speed up development and solve complex business problems.</p>
-                    <br>
-                    <p>Currently at <strong>Shopee</strong>, I'm analyzing chatbot performance and training models. I specialize in <strong>AI Automation</strong>—building workflows that let AI handle the busywork so the business can move faster.</p>
-                </div>
-            </section>
-
-            <!-- GitHub & Coding Section -->
-            <section id="github">
-                <span class="section-title">GitHub & Code</span>
-                
-                <a href="https://github.com/jiakaii0" target="_blank">
-                    <div class="card github-card">
-                        <div class="github-header">
-                            <i class="fab fa-github fa-2x"></i>
-                            <div>
-                                <h3 style="color: white; margin:0;">jiakaii0</h3>
-                                <span style="font-size: 0.8rem; color: #94a3b8;">Full Stack & AI Enthusiast</span>
-                            </div>
-                        </div>
-                        <p style="font-size: 0.9rem; color: #cbd5e1;">Check out my repositories, featuring AI integrations, automation scripts, and product tools.</p>
-                        
-                        <div class="github-stats">
-                            <div class="stat-box">
-                                <div class="stat-num">Native</div>
-                                <div class="stat-label">Python</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-num">Fluent</div>
-                                <div class="stat-label">TypeScript</div>
-                            </div>
-                            <div class="stat-box">
-                                <div class="stat-num">Pro</div>
-                                <div class="stat-label">Prompts</div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="card">
-                    <h3 class="job-title">Technical Skills</h3>
-                    <div class="tech-stack" style="margin-top: 1rem;">
-                        <span class="tech-tag">Prompt Engineering</span>
-                        <span class="tech-tag">LLM Tuning</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Tableau</span>
-                        <span class="tech-tag">Salesforce</span>
-                        <span class="tech-tag">Vibe Coding</span>
-                    </div>
+                    <p>I'm an AI product professional with <strong>4+ years of experience</strong> across e-commerce and B2B technology. As <strong>Lead AI Engineer at Shopee</strong>, I deliver AI agents and automation for digital payments, customer support and internal operations.</p>
+                    <p>I work with Product Managers, developers and clients to connect business requirements with technical implementation. My experience includes LLM training, API integration, performance analysis, QA and user acceptance testing.</p>
+                    <p>I hold an MBA in Management Information Systems and speak <strong>Mandarin and English natively</strong>, with fluency in <strong>Cantonese and Bahasa Malaysia</strong>.</p>
                 </div>
             </section>
 
             <!-- Experience Section -->
             <section id="experience">
-                <span class="section-title">Experience</span>
+                <h2 class="section-title">Experience</h2>
 
                 <div class="card">
                     <div class="job-header">
                         <div>
-                            <span class="job-title">Senior Associate Chatbot Analytics</span><br>
+                            <span class="job-title">Lead AI Engineer</span><br>
                             <span class="job-company">Shopee</span>
                         </div>
-                        <span class="job-date">July 2024 – Present</span>
+                        <span class="job-date">2025 – Present</span>
                     </div>
-                    <p class="job-desc">Training the chatbot using LLM models to handle customer inquiries. Analyzing data to drive continuous improvements.</p>
+                    <p class="job-desc">Drive the end-to-end lifecycle of AI capabilities for merchant support and adoption, partnering with developers and Product Managers to align business and technical goals. Lead LLM training and chatbot script development, using performance metrics and user feedback to refine features and achieve a <strong>70% checkout conversion rate</strong>.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">AI Training</span>
                         <span class="tech-tag">LLMs</span>
@@ -534,9 +501,9 @@
                         </div>
                         <span class="job-date">Dec 2022 – Dec 2024</span>
                     </div>
-                    <p class="job-desc">Managed user inquiries, QA testing, and product front-end presentation. Acted as primary liaison between dev and clients.</p>
+                    <p class="job-desc">Served as the primary liaison between clients and development teams on requirements and goals. Supported QA, user acceptance testing and product presentations. Contributed to AI tax summaries with <strong>98% content accuracy</strong> and a <strong>70% subscription rate</strong> for AI tax assistance through technical tutorials and product stability support.</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">Product Mgmt</span>
+                        <span class="tech-tag">Business Requirements</span>
                         <span class="tech-tag">UAT</span>
                         <span class="tech-tag">SQL</span>
                         <span class="tech-tag">QA</span>
@@ -551,14 +518,95 @@
                         </div>
                         <span class="job-date">May 2022 - Nov 2022</span>
                     </div>
-                    <p class="job-desc">Conducted market research and feasibility studies to identify emerging trends.</p>
+                    <p class="job-desc">Conducted market research and feasibility studies, analyzed customer pain points and competitors, and coordinated with external stakeholders to integrate intellectual property into products.</p>
+                </div>
+                <div class="card">
+                    <div class="job-header">
+                        <div><span class="job-title">Facility Attendant</span><br><span class="job-company">Wichita State University</span></div>
+                        <span class="job-date">May 2017 – Jan 2019</span>
+                    </div>
+                    <p class="job-desc">Coordinated facility maintenance and administration; supported disability health initiatives.</p>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2 class="section-title">Selected Projects</h2>
+                <article class="card">
+                    <h3 class="job-title">Online Payment Enhancement</h3>
+                    <p class="project-result">48% → 75% CSAT</p>
+                    <p class="job-desc">Improved Malaysia payment-inquiry customer satisfaction from 48% to 75%. Implemented 24/7 AI monitoring of abnormal payment failures and automated alerts for internal teams, with a 95% payment-success benchmark.</p>
+                    <div class="tech-stack"><span class="tech-tag">Digital Payments</span><span class="tech-tag">Monitoring</span><span class="tech-tag">Process Improvement</span></div>
+                </article>
+                <article class="card">
+                    <h3 class="job-title">Monee Chatbot for SPayLater and ShopeePay</h3>
+                    <p class="project-result">Concept to implementation</p>
+                    <p class="job-desc">Designed and built an AI agent for digital wallet users. Integrated custom API logic for payment, KYC and account status checks, and automated interaction logging to surface customer trends.</p>
+                    <div class="tech-stack"><span class="tech-tag">AI Agents</span><span class="tech-tag">API Integration</span><span class="tech-tag">KYC</span></div>
+                </article>
+                <article class="card">
+                    <h3 class="job-title">Shopee AI Video Studios</h3>
+                    <p class="project-result">USD 1.2 million estimated savings</p>
+                    <p class="job-desc">Created a shared video generation and editing platform with Model Context Protocol (MCP) connectivity, enabling users to create and edit videos through AI agents. Generated estimated savings of USD 1.2 million across departments.</p>
+                    <div class="tech-stack"><span class="tech-tag">MCP</span><span class="tech-tag">AI Video</span><span class="tech-tag">Implementation</span></div>
+                </article>
+                <article class="card">
+                    <h3 class="job-title">AI Role Based Agent</h3>
+                    <p class="project-result">5% CSAT improvement · USD 100,000 savings</p>
+                    <p class="job-desc">Developed an AI agent connected to business performance data to identify and implement process improvements. Required operator approval before A/B testing; improved CSAT by 5% and generated USD 100,000 in savings.</p>
+                    <div class="tech-stack"><span class="tech-tag">AI Agents</span><span class="tech-tag">A/B Testing</span><span class="tech-tag">Human Approval</span></div>
+                </article>
+                <article class="card">
+                    <h3 class="job-title">Agentic Analytics and Real Time Monitoring</h3>
+                    <p class="project-result">USD 4,000 in monthly savings</p>
+                    <p class="job-desc">Built automated data sampling workflows for daily business analysis using service-level agreements, CSAT and ROI. Implemented 24/7 cross-channel monitoring and automated reporting, with an API bot to review SOPs and identify customer pain points. Agentic workflows contributed USD 4,000 in monthly savings.</p>
+                    <div class="tech-stack"><span class="tech-tag">Analytics</span><span class="tech-tag">Automation</span><span class="tech-tag">Operations</span></div>
+                </article>
+            </section>
+
+            <!-- GitHub & Coding Section -->
+            <section id="github">
+                <h2 class="section-title">Skills &amp; Code</h2>
+
+                <a href="https://github.com/jiakaii0" target="_blank" rel="noopener noreferrer">
+                    <div class="card github-card">
+                        <div class="github-header">
+                            <i class="fab fa-github fa-2x"></i>
+                            <div>
+                                <h3 style="color: white; margin:0;">jiakaii0</h3>
+                                <span style="font-size: 0.8rem; color: #94a3b8;">AI implementation &amp; product development</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #cbd5e1;">Check out my repositories, featuring AI integrations, automation scripts, and product tools.</p>
+
+                    </div>
+                </a>
+
+                <div class="card">
+                    <h3 class="job-title">Technical Skills</h3>
+                    <div class="tech-stack" style="margin-top: 1rem;">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">LLM Implementation</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Microsoft 365</span>
+                        <span class="tech-tag">Salesforce</span>
+                        <span class="tech-tag">Tableau</span>
+                        <span class="tech-tag">UI Testing</span>
+                        <span class="tech-tag">QA</span>
+                    </div>
                 </div>
             </section>
 
             <!-- Education Section -->
             <section id="education">
-                <span class="section-title">Education & Languages</span>
-                
+                <h2 class="section-title">Education &amp; Languages</h2>
+
                 <div class="card">
                     <div class="job-header">
                         <span class="job-title">MBA Management Information Systems</span>
@@ -569,7 +617,7 @@
 
                 <div class="card">
                     <div class="job-header">
-                        <span class="job-title">BA International Business</span>
+                        <span class="job-title">BA International Business and Economics</span>
                         <span class="job-date">2020</span>
                     </div>
                     <div class="job-company">Wichita State University</div>
@@ -597,7 +645,7 @@
 
             <footer>
                 <p>Designed with <i class="fas fa-heart" style="color: #f43f5e;"></i> & Vibe.</p>
-                <p>&copy; 2025 Jia Kai Hong</p>
+                <p>&copy; 2026 Jia Kai Hong</p>
             </footer>
         </main>
     </div>
