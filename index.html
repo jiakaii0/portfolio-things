@@ -395,6 +395,19 @@
         }
         .about-text p + p { margin-top: 1rem; }
         .project-result { color: #0369a1; font-weight: 700; margin: 0.65rem 0; }
+        .award-heading { display: flex; align-items: center; gap: 0.8rem; }
+        .award-icon {
+            width: 2.6rem;
+            height: 2.6rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            border-radius: 50%;
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+        .award-meta { color: var(--accent); font-weight: 600; margin-top: 0.15rem; }
         a:focus-visible { outline: 3px solid #0369a1; outline-offset: 4px; }
         .section-title { padding-bottom: 0.5rem; border-bottom: 1px solid #bad5e5; color: #0369a1; }
         @media (prefers-reduced-motion: reduce) {
@@ -411,8 +424,9 @@
     <!-- Mobile Navigation (Bottom Floating Bar) -->
     <nav class="mobile-nav">
         <a href="#about" title="About"><i class="fas fa-user"></i></a>
-        <a href="#projects" title="Projects" aria-label="Projects"><i class="fas fa-code" aria-hidden="true"></i></a>
         <a href="#experience" title="Work"><i class="fas fa-briefcase"></i></a>
+        <a href="#projects" title="Projects" aria-label="Projects"><i class="fas fa-code" aria-hidden="true"></i></a>
+        <a href="#awards" title="Awards" aria-label="Awards"><i class="fas fa-trophy" aria-hidden="true"></i></a>
         <a href="mailto:jiakaii97@gmail.com" title="Contact"><i class="fas fa-envelope"></i></a>
     </nav>
 
@@ -441,8 +455,9 @@
                         <li><a href="#about">01. About</a></li>
                         <li><a href="#experience">02. Experience</a></li>
                         <li><a href="#projects">03. Projects</a></li>
-                        <li><a href="#github">04. Skills &amp; Code</a></li>
-                        <li><a href="#education">05. Education &amp; Languages</a></li>
+                        <li><a href="#awards">04. Awards</a></li>
+                        <li><a href="#github">05. Skills &amp; Code</a></li>
+                        <li><a href="#education">06. Education &amp; Languages</a></li>
                     </ul>
                 </nav>
             </div>
@@ -554,6 +569,32 @@
                     <p class="project-result">USD 4,000 in monthly savings</p>
                     <p class="job-desc">Built automated data sampling workflows for daily business analysis using service-level agreements, CSAT and ROI. Implemented 24/7 cross-channel monitoring and automated reporting, with an API bot to review SOPs and identify customer pain points. Agentic workflows contributed USD 4,000 in monthly savings.</p>
                     <div class="tech-stack"><span class="tech-tag">Analytics</span><span class="tech-tag">Automation</span><span class="tech-tag">Operations</span></div>
+                </article>
+            </section>
+
+            <section id="awards">
+                <h2 class="section-title">Awards</h2>
+
+                <article class="card">
+                    <div class="award-heading">
+                        <span class="award-icon"><i class="fas fa-trophy" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 class="job-title">AI Innovator Awards</h3>
+                            <p class="award-meta">Shopee · Q2 2026</p>
+                        </div>
+                    </div>
+                    <p class="job-desc" style="margin-top: 1rem;">Recognized for championing AI adoption across the organisation.</p>
+                </article>
+
+                <article class="card">
+                    <div class="award-heading">
+                        <span class="award-icon"><i class="fas fa-star" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 class="job-title">Outstanding Contribution Awards</h3>
+                            <p class="award-meta">Shopee</p>
+                        </div>
+                    </div>
+                    <p class="job-desc" style="margin-top: 1rem;">Recognized for impactful contribution to the team in the pursuit of high performance.</p>
                 </article>
             </section>
 
